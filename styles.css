@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom, #cc99ff, #b08eff, #9b6eff); /* Degradê na vertical com mais transições */
-  transition: transform 0.3s ease;
+  background: linear-gradient(to bottom, #ff69b4, #cea2ff, #b08eff); /* Degradê na vertical com mais transições */
+
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;
@@ -121,13 +121,14 @@ footer a:hover {
 }
 
 .btn-primary {
-  background-color: #b08eff; /* Define a cor do botão "COMPRAR" */
-  border-color: #b08eff; /* Ajusta a cor da borda para combinar */
+  background-color: #b08eff !important;
+  border-color: #b08eff !important;
 }
 
-.btn-primary:hover, .btn-primary:focus {
-  background-color: #9b6eff; /* Cor mais escura ao passar o mouse */
-  border-color: #9b6eff; /* Ajusta a borda ao passar o mouse */
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #9b6eff !important;
+  border-color: #9b6eff !important;
 }
 
 @media (max-width: 1024px) {
