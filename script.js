@@ -3,15 +3,15 @@ function comprar(cidade) {
   console.log('Cidade recebida:', cidade);
 
   let urls = {
-    'rio-de-janeiro': 'https://www.ticketmaster.com.br/event/luluca-responde-ao-vivo-no-qualistage-rj?_gl=1*1mguzjm*_gcl_au*NDU3Mjc4NjgyLjE3NDM0NDI1ODg',
-    'brasilia': 'https://www.bilheteriadigital.com/luluca-responde-ao-vivo-05-de-julho',
-    'goiania': 'https://www.bilheteriadigital.com/luluca-responde-ao-vivo-06-de-julho',
-    'fortaleza': 'https://uhuu.com/evento/ce/fortaleza/luluca-responde-ao-vivo-14575',
-    'recife': 'https://uhuu.com/evento/pe/recife/luluca-responde-ao-vivo-14599',
-    'curitiba': 'https://www.diskingressos.com.br/event/88',
-    'porto-alegre': 'https://www.bilheteriadigital.com/luluca-2025-porto-alegre-07-de-setembro',
-    'minas-gerais': 'https://lulucaresponde.byinti.com/#/event/belo-horizonte-28-09-sesi-minas-bh',
-    'sao-paulo': 'https://lulucaresponde.byinti.com/#/event/sao-paulo-30-11-2025-sala-sp',
+    // 'rio-de-janeiro': 'https://www.ticketmaster.com.br/event/luluca-responde-ao-vivo-no-qualistage-rj?_gl=1*1mguzjm*_gcl_au*NDU3Mjc4NjgyLjE3NDM0NDI1ODg',
+    // 'brasilia': 'https://www.bilheteriadigital.com/luluca-responde-ao-vivo-05-de-julho',
+    // 'goiania': 'https://www.bilheteriadigital.com/luluca-responde-ao-vivo-06-de-julho',
+    // 'fortaleza': 'https://uhuu.com/evento/ce/fortaleza/luluca-responde-ao-vivo-14575',
+    // 'recife': 'https://uhuu.com/evento/pe/recife/luluca-responde-ao-vivo-14599',
+    // 'curitiba': 'https://www.diskingressos.com.br/event/88',
+    // 'porto-alegre': 'https://www.bilheteriadigital.com/luluca-2025-porto-alegre-07-de-setembro',
+    // 'minas-gerais': 'https://lulucaresponde.byinti.com/#/event/belo-horizonte-28-09-sesi-minas-bh',
+    // 'sao-paulo': 'https://lulucaresponde.byinti.com/#/event/sao-paulo-30-11-2025-sala-sp',
     'natal': 'https://uhuu.com/evento/rn/natal/luluca-responde-ao-vivo-15416'
   };
 

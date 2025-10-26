@@ -7,7 +7,8 @@ const cidades = {
   "curitiba": "Curitiba",
   "porto-alegre": "Porto Alegre",
   "minas-gerais": "Minas Gerais",
-  "sao-paulo": "São Paulo"
+  "sao-paulo": "São Paulo",
+  "natal": "Natal"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
     "curitiba": "Curitiba",
     "porto-alegre": "Porto Alegre",
     "minas-gerais": "Minas Gerais",
-    "sao-paulo": "São Paulo"
+    "sao-paulo": "São Paulo",
+    "natal": "Natal"
   };
   
 
