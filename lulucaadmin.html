@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Admin - Luluca Responde 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="admin.css?v=1.0.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <!-- Configuração do Firebase -->
+  <script src="firebase.js"></script>
+  <script defer src="admin.js?v=1.0.0"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold dashboard-header">
+        <i class="bi bi-graph-up-arrow me-2"></i>Dashboard de Cliques - Luluca Responde 2025
+      </h2>
+      <p class="text-muted">Acompanhe em tempo real os cliques em cada cidade</p>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-4 mb-5">
+      <button id="btn-grafico" class="btn btn-outline-secondary">
+        <i class="bi bi-bar-chart-line me-1"></i> Visualizar Gráfico
+      </button>
+      <button id="btn-voltar" class="btn btn-outline-secondary" style="display: none;">
+        <i class="bi bi-arrow-left me-1"></i> Voltar aos Cards
+      </button>
+      <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalExportar">
+        <i class="bi bi-download me-1"></i> Exportar Dados
+      </button>
+    </div>
+    
+    <!-- Gráfico (inicialmente escondido) -->
+    <div class="my-4" id="grafico-container" style="display: none;">
+      <div class="grafico-wrapper p-4">
+        <h4 class="grafico-titulo text-center fw-bold mb-4">
+          <i class="bi bi-bar-chart-fill me-2"></i> Cliques por Cidade (Visual)
+        </h4>
+        <div class="ratio ratio-16x9">
+          <canvas id="grafico-cidades"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cards das cidades (populados dinamicamente via script abaixo) -->
+    <div id="cards-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col" id="card-rio-de-janeiro"></div>
+      <div class="col" id="card-brasilia"></div>
+      <div class="col" id="card-goiania"></div>
+      <div class="col" id="card-fortaleza"></div>
+      <div class="col" id="card-recife"></div>
+      <div class="col" id="card-curitiba"></div>
+      <div class="col" id="card-porto-alegre"></div>
+      <div class="col" id="card-minas-gerais"></div>
+      <div class="col" id="card-sao-paulo"></div>
+    </div>
+
+  </div>
+
+  <footer class="bg-light py-3 mt-auto text-center w-100">
+    <p class="mb-0">© 2025 Luluca Responde - Painel administrativo</p>
+  </footer>
+
+  <!-- Modal Exportação -->
+  <div class="modal fade" id="modalExportar" tabindex="-1" aria-labelledby="modalExportarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalExportarLabel">Exportar Dados</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Escolha o formato desejado:</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-outline-danger btn-sm px-4" id="btn-pdf">
+              <i class="bi bi-file-earmark-pdf-fill me-1"></i> PDF
+            </button>
+            <button class="btn btn-outline-success btn-sm px-4" id="btn-excel">
+              <i class="bi bi-file-earmark-excel-fill me-1"></i> Excel
+            </button>
+          </div>                    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+</body>
+</html>

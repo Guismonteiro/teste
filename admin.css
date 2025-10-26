@@ -1,0 +1,97 @@
+/* Reset e estrutura global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Títulos */
+.dashboard-header {
+  color: #6f42c1;
+}
+
+h5.card-title {
+  color: #6f42c1;
+}
+
+/* Card de cliques */
+.card-clique {
+  background: white;
+  border: 2px solid #6f42c1;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-clique:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-clique .card-count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.card-clique p {
+  color: #6c757d;
+}
+
+/* Gráfico */
+.grafico-wrapper {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+/* Transições */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Botões */
+button.btn {
+  min-width: 160px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card-clique .card-count {
+    font-size: 2rem;
+  }
+
+  .dashboard-header {
+    font-size: 1.3rem;
+  }
+
+  button.btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .d-flex.gap-3 {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+}

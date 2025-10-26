@@ -1,0 +1,159 @@
+/* Reset geral */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #cc99ff, #b08eff, #9b6eff); /* Degradê na vertical com mais transições */
+  transition: transform 0.3s ease;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); Sombra leve para melhorar a legibilidade */
+}
+
+
+main {
+  flex: 1;
+}
+
+.hero {
+  min-height: auto;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+.hero img {
+  object-fit: cover;
+  height: auto;
+  max-width: 100%;
+}
+
+.card {
+  background: linear-gradient(145deg, #ff69b4, #b08eff);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3, .card strong, .card p {
+  color: #fff !important;
+}
+
+.card-date {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* header.navbar {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  animation: slideFade 0.8s ease-out forwards;
+  opacity: 0;
+} */
+
+/* header.navbar.scrolled {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar-brand img {
+  border-radius: 12px;
+}
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover {
+  color: #ff69b4 !important;
+} */
+
+footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+footer a:hover {
+  color: #ff69b4;
+}
+
+#sobre p {
+  color: white !important;
+}
+
+.nova-turne p {
+  color: white; /* Garante que o texto permaneça branco */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para destacar o texto */
+}
+
+.btn-primary {
+  background-color: #b08eff; /* Define a cor do botão "COMPRAR" */
+  border-color: #b08eff; /* Ajusta a cor da borda para combinar */
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #9b6eff; /* Cor mais escura ao passar o mouse */
+  border-color: #9b6eff; /* Ajusta a borda ao passar o mouse */
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  section {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
+}
