@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to right, #ff69b4, #cea2ff, #b08eff); /* Degradê na horizontal com mais transições */
+  background: linear-gradient(to bottom, #fa7ebc, #cea2ff, #b08eff); /* Degradê na horizontal com mais transições */
 
   background-attachment: fixed;
   background-size: cover;
@@ -34,7 +34,7 @@ main {
 }
 
 .card {
-  background: linear-gradient(145deg, #ff69b4, #b08eff);
+  background: linear-gradient(145deg, #fa7ebc, #b08eff);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
