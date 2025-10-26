@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom, #ff69b4, #cea2ff, #b08eff); /* Degradê na vertical com mais transições */
+  background: linear-gradient(to right, #ff69b4, #cea2ff, #b08eff); /* Degradê na horizontal com mais transições */
 
   background-attachment: fixed;
   background-size: cover;
