@@ -121,14 +121,14 @@ footer a:hover {
 }
 
 .btn-primary {
-  background-color: #b08eff !important;
-  border-color: #b08eff !important;
+  background-color: #9b6eff !important;
+  border-color: #9b6eff !important;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #9b6eff !important;
-  border-color: #9b6eff !important;
+  background-color: #b08eff !important;
+  border-color: #b08eff !important;
 }
 
 @media (max-width: 1024px) {
